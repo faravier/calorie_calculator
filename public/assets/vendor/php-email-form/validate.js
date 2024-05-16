@@ -24,6 +24,8 @@
       thisForm.querySelector('.loading').classList.add('d-block');
       thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
+      thisForm.querySelector('.calorie-result').classList.remove('d-block');
+
 
       let formData = new FormData( thisForm );
 
@@ -63,22 +65,24 @@
       }
     })
     .then(data => {
+      console.log('log data', data)
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
+      if (data) {
+        // thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.querySelector('.calorie-result').innerHTML = data;
+        thisForm.querySelector('.calorie-result').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        // throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
     })
     .catch((error) => {
       displayError(thisForm, error);
-      console.log("log error",error)
+      console.log("log error 1",error)
     });
   }
 
   function displayError(thisForm, error) {
-    
     thisForm.querySelector('.loading').classList.remove('d-block');
     thisForm.querySelector('.error-message').innerHTML = error;
     thisForm.querySelector('.error-message').classList.add('d-block');

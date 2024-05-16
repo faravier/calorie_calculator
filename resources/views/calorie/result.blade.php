@@ -1,70 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/assets/style.css" rel="stylesheet">
-
-    <title>Document</title>
+    <title>Calorie Calculator</title>
+    <!-- Add the Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
-<div class="container mt-5">
-        <h1 class="text-center mb-4">Calorie Calculator</h1>
-        <form style="display: hidden;" action="{{ route('calculateresult') }}" method="post">
-            @csrf
-            <!-- <div class="form-group">
-                <label for="name">Username:</label>
-                <input type="text" class="form-control" name="name" required>
-            </div> -->
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" class="form-control" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="height">Height:</label>
-                <input type="number" class="form-control" name="height" required>
-            </div>
-            <div class="form-group">
-                <label for="weight">Weight:</label>
-                <input type="number" class="form-control" name="weight" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <select class="form-control" name="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="food">Food/Drinks Eaten Today:</label>
-                <textarea class="form-control" name="food" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="activities">Activities You Did Today:</label>
-                <textarea class="form-control" name="activities" rows="4" required></textarea>
-            </div>
-            <!-- Add more form-group div elements if needed for additional food/drinks and activities -->
-            <button type="submit" class="btn btn-primary">Calculate Calories</button>
-            <div class="mt-3">
-            <a href="{{ route('progress-table') }}" class="btn btn-secondary">View Progress Table</a>
-            </div>
-            @if (isset($error))
-                <div class="alert alert-danger">
-                    {{ $error }}
-                </div>
-            @endif
-
-        </form>
-
+    <div class="container mt-5">
               @if (isset($calculatedResults))
                 <div class="mt-5">
-                    <h2>Calculated Results:</h2>
-                        {!! $calculatedResults !!}
+                    <h2 class="text-center mb-5">Calculated Results:</h2>
+                    <div class="row text-center" id="container-result">
+                        <div class="col-md-4">
+                            <h4>Food</h4>
+                            <div class="icon-result"><i class="bi bi-egg-fried"></i></div>
+                            <p> {{ $dataObject->food }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Activities</h4>
+                            <div class="icon-result"><i class="bi bi-person-walking"></i></div>
+                            <p>{{ $dataObject->activities }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Food Calories</h4>
+                            <div class="icon-result"><i class="bi bi-fire"></i></div>
+                            <p>{{ $dataObject->food_calories }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Activity Calories</h4>
+                            <div class="icon-result"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                            <p>{{ $dataObject->activity_calories }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>BMR</h4>
+                            <div class="icon-result"><i class="bi bi-speedometer2"></i></div>
+                            <p>{{ $dataObject->bmr }}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h4>Total Calories</h4>
+                            <div class="icon-result"><i class="bi bi-pc-display-horizontal"></i></div>
+                            <p>{{ $dataObject->total_calories }}</p>
+                        </div>
+                    </div>
                 </div>
                 @endif
     </div>
-</body>
 
+    <!-- Add the Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
