@@ -370,7 +370,7 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <form action="{{ route('calculateresult') }}" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+        <form action="{{ route('calculateresult') }}" method="post"  class="php-email-form" data-aos="fade-up" data-aos-delay="100">
         @csrf 
         <div class="row">
             <div class="col-md-4 form-group">
@@ -416,8 +416,8 @@
             <div class="loading">Loading</div>
             <div class="error-message"></div>
 
-
-            <div class="sent-message">Your input has been sent successfully. Thank you!</div>
+            <div class="sent-message"></div>
+            <div class="calorie-result"></div>
           </div>
           <div class="text-center"><button type="submit">Submit</button></div>
         </form>
