@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Rating; // Adjust this according to your model
+use App\Models\Rating;
 
 class RatingController extends Controller
 {

@@ -239,6 +239,38 @@
     </section><!-- End Recommendation Section -->
 
     <!-- Rate Us Section -->
+    <section id="rate-us" class="departments">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Rate Us</h2>
+        <p>We would love to hear your feedback!</p>
+      </div>
+
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-lg-6">
+        <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
+            @csrf
+            <div class="form-group">
+              <label for="rating">Rate your experience (1-5):</label>
+              <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+              <label for="comment">Additional Comments:</label>
+              <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
+            </div>
+            <div class="text-center"><button type="submit">Submit</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    @if(session('success'))
+  <div class="alert alert-success">
+    {{ session('success') }}
+  </div>
+@endif
+
+  </section><!-- End Rate Us Section -->
   
     
   </main><!-- End #main -->
