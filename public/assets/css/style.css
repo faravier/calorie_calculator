@@ -164,6 +164,7 @@ h6 {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  max-height: 90px;
 }
 
 #header .logo a {
@@ -171,7 +172,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  
 }
 
 /**
