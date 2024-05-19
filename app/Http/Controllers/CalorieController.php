@@ -85,10 +85,11 @@ You should ONLY write the response into exact specific format.
         Log::info("output " . json_encode($text));
 
 //Pemisahan text
-$input_parts = explode("\r\n", $text);
-$foodtext = trim($input_parts[2]);
-$activitytext = trim($input_parts[3]);
-$bmrtext = trim($input_parts[4]);
+$input_parts = explode("\n" , $text);
+Log::info("input_parts",$input_parts);
+$foodtext = trim($input_parts[1]);
+$activitytext = trim($input_parts[2]);
+$bmrtext = trim($input_parts[3]);
 
 //Parsing angka
 preg_match_all('/\(([\d.]+)\)\s*calories/', $foodtext, $food_matches);
@@ -119,6 +120,17 @@ Log::info("food_calories " . json_encode($food_calories));
 Log::info("activity_calories" . json_encode($activity_calories));
 Log::info("bmr" . json_encode($bmr));
 Log::info("total_calories" . json_encode($total_calories));
+
+$mergedData = [
+    'food' => $food,
+    'activities' => $activities,
+    'food_calories' => $food_calories,
+    'activity_calories' => $activity_calories,
+    'bmr' => $bmr,
+    'total_calories' => $total_calories,
+];
+$dataObject = (object) $mergedData;
+Log::info("dataObject" . json_encode($dataObject));
 /////////////////////////////
 
         
@@ -141,14 +153,15 @@ Log::info("total_calories" . json_encode($total_calories));
         $recommendationController = new RecommendationController();
         $recommendation = $recommendationController->generateRecommendation();
         
-        return view('calorie.result', compact('calculatedResults', 'recommendation'));
+        return view('calorie.result', compact('calculatedResults', 'recommendation','dataObject'));
 
         
     }   
         catch (\Exception $e) {
         //API request error
-        // Log::error("API Request Error: " . $e->getMessage());
-        // return view('calorie.result')->with('error', 'An error occurred while processing your request.');
+        // dd($e);
+        Log::error("API Request Error: " . $e);
+        return view('calorie.result')->with('error', 'An error occurred while processing your request.');
     }
 
 
