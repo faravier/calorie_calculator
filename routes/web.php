@@ -22,6 +22,7 @@ Route::post('/calorie/result', [CalorieController::class, 'calculateCalories'])-
 Route::get('/progress-table', [CalorieController::class, 'showEntries'])->name('progress-table');
 Route::get('/weekly-progress', [CalorieController::class, 'showWeeklyProgress'])->name('weekly-progress');
 Route::get('/recommendation', [RecommendationController::class, 'generateRecommendation'])->name('recommendation');
+Route::post('/submit-rating', [App\Http\Controllers\RatingController::class, 'submitRating'])->name('submit_rating');
 
 
 require __DIR__.'/auth.php';

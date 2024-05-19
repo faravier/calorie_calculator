@@ -237,6 +237,9 @@
 
       </div>
     </section><!-- End Recommendation Section -->
+
+    <!-- Rate Us Section -->
+  
     
   </main><!-- End #main -->
 
