@@ -5,9 +5,11 @@ use App\Http\Controllers\CalorieController;
 use App\Http\Controllers\RecommendationController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('calorie.home');
-});
+// Route::get('/', function () {
+//     return view('calorie.home');
+// });
+Route::get('/', [CalorieController::class, 'showHome'])->name('index');
+
 
 
 Route::get('/dashboard', function () {

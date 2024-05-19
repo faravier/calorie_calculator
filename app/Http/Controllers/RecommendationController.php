@@ -94,7 +94,7 @@ class RecommendationController extends Controller
         $data = json_decode($response->getBody(), true);
         $additionalRecommendation = $data['choices'][0]['text'];
 
-        return view('calorie.recommendation', compact('averageTotalCalories', 'recommendation', 'additionalRecommendation'));
+        return response()->json(['averageTotalCalories' => $averageTotalCalories, 'recommendation' => $recommendation, 'additionalRecommendation' => $recommendation]);
 
     }
 }

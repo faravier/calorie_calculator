@@ -8,6 +8,7 @@ use App\Models\CalorieRecord;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use App\Http\Controllers\RecommendationController;
 
 class CalorieController extends Controller
 {
@@ -206,6 +207,16 @@ public function showWeeklyProgress()
     $jsonTotalCalories = json_encode($totalCalories);
 
     return view('calorie.weekly_progress', compact('jsonDates', 'jsonTotalCalories'));
+}
+
+public function showHome()
+{
+    // $recommendData = RecommendationController::generateRecommendation();
+    $recommendFuction = new RecommendationController();
+    $recommendData = $recommendFuction -> generateRecommendation() ->getData();
+    // $data = json_decode($recommendData->getData(), true);
+    // dd($recommendData);
+    return view('calorie.home', compact('recommendData'));
 }
 
 
