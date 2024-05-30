@@ -208,8 +208,7 @@
 
       <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-6">
-<<<<<<< HEAD
-<form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
+<form action="{{ route('submit_rating') }}" method="post" role="form" class="php-rating-form">
     @csrf
     <div class="form-group">
         <label for="rating">Nilai pengalaman keseluruhan anda:</label>
@@ -219,23 +218,9 @@
         <label for="comment">Komentar tambahan:</label>
         <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
     </div>
-    <div class="text-center"><button type="submit">Kirim</button></div>
+    <div class="text-center mt-2"><button type="submit">Kirim</button></div>
 </form>
 
-=======
-        <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-rating-form">
-            @csrf
-            <div class="form-group">
-              <label for="rating">Nilai pengalaman keseluruhan anda:</label>
-              <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
-            </div>
-            <div class="form-group">
-              <label for="comment">Komentar tambahan:</label>
-              <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
-            </div>
-            <div class="text-center mt-2"><button type="submit">Kirim</button></div>
-          </form>
->>>>>>> 90bc46dbf76a729bed4a2a1e1cd4ee63e4b04a88
         </div>
         <div class="loading"></div>
         <div class="error-message"></div>
