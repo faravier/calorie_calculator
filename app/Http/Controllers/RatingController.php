@@ -18,7 +18,7 @@ class RatingController extends Controller
         // Store the rating in the database
         $rating = new Rating();
         $rating->rating = $request->input('rating');
-        $rating->comment = $request->input('comment');
+        $rating->comments = $request->input('comment');
         $rating->save();
 
         // Optionally, you can redirect back with a success message

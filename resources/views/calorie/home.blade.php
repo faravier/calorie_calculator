@@ -206,9 +206,9 @@
         <p>Tolong nilai kami sebagai bahan evaluasi kami untuk meningkatkan pelayanan.</p>
       </div>
 
-      <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-6">
-        <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
+        <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-rating-form">
             @csrf
             <div class="form-group">
               <label for="rating">Nilai pengalaman keseluruhan anda:</label>
@@ -218,9 +218,11 @@
               <label for="comment">Komentar tambahan:</label>
               <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
             </div>
-            <div class="text-center"><button type="submit">Kirim</button></div>
+            <div class="text-center mt-2"><button type="submit">Kirim</button></div>
           </form>
         </div>
+        <div class="loading"></div>
+        <div class="error-message"></div>
       </div>
     </div>
 
@@ -242,6 +244,8 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/php-email-form/validateRating.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

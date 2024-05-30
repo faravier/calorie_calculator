@@ -21,10 +21,10 @@
         displayError(thisForm, 'The form action property is not set!');
         return;
       }
-      thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
-      thisForm.querySelector('.sent-message').classList.remove('d-block');
-      thisForm.querySelector('.calorie-result').classList.remove('d-block');
+      // thisForm.querySelector('.loading').classList.add('d-block');
+      // thisForm.querySelector('.error-message').classList.remove('d-block');
+      // thisForm.querySelector('.sent-message').classList.remove('d-block');
+      // thisForm.querySelector('.calorie-result').classList.remove('d-block');
 
 
       let formData = new FormData( thisForm );
