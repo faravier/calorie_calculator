@@ -16,7 +16,7 @@ class RatingController extends Controller
 
         $rating = new Rating();
         $rating->rating = $request->input('rating');
-        $rating->comment = $request->input('comment');
+        $rating->comments = $request->input('comment');
         $rating->save();
 
         return redirect()->back()->with('success', 'Thank you for your feedback!');

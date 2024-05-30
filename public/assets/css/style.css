@@ -1065,6 +1065,19 @@ section {
   background: #52c2c6;
 }
 
+.php-rating-form button[type=submit] {
+  background: #3fbbc0;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.php-rating-form button[type=submit]:hover {
+  background: #52c2c6;
+}
+
 /*--------------------------------------------------------------
 # Departments
 --------------------------------------------------------------*/
