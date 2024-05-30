@@ -46,13 +46,13 @@ class RecommendationController extends Controller
 
         // Create the recommendation based on the average
         if ($bmi < 18.5) {
-            $recommendation = "You are underweight. You should consider gaining weight.";
+            $recommendation = "Anda kekurangan berat badan. Pertimbangkan untuk menambah berat badan.";
         } elseif ($bmi >= 18.5 && $bmi < 24.9) {
-            $recommendation = "Your weight is normal. Maintain a balanced diet and exercise regularly.";
+            $recommendation = "Berat badan anda normal. Pertahankan dengan olahraga rutin dan makan makanan sehat.";
         } elseif ($bmi >= 25 && $bmi < 29.9) {
-            $recommendation = "You are overweight. Consider losing weight through diet and exercise.";
+            $recommendation = "Anda kelebihan berat badan. Pertimbangkan untuk mengurangi berat badan.";
         } else {
-            $recommendation = "You are obese. Consult with a healthcare professional for a proper weight management plan.";
+            $recommendation = "Anda obesitas. Pertimbangkan untuk konsultasi dengan dokter atau ahli kesehatan untuk mendapatkan rencana manajemen berat badan yang tepat.";
         }
 
         // Use ChatGPT API for additional recommendation based on average

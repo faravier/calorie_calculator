@@ -40,51 +40,21 @@
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
-  <!-- <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
-      <div class="align-items-center d-none d-md-flex">
-        <i class="bi bi-clock"></i> Monday - Saturday, 8AM to 10PM
-      </div>
-      <div class="d-flex align-items-center">
-        <i class="bi bi-phone"></i> Call us now +1 5589 55488 55
-      </div>
-    </div>
-  </div> -->
-
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
      
-   <!-- GANTI LOGO -->    <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <h1 class="logo me-auto"><a href="index.html">Medicio</a></h1> -->
+   <a href="http://127.0.0.1:8000/" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+      
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#appointment">Calculator</a></li>
-          <li><a class="nav-link scrollto" href="#recommendations">Recommendations</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Rate Us</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-          
+          <li><a class="nav-link scrollto" href="#appointment">Kalkulator</a></li>
+          <li><a href="http://127.0.0.1:8000/weekly-progress">Progres Mingguan</a></li>
+          <li><a class="nav-link scrollto" href="#recommendations">Rekomendasi dan Saran</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Nilai Kami</a></li>          
     </div>
   </header><!-- End Header -->
 
@@ -94,8 +64,8 @@
         <!-- Slide 1 -->
         <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg)">
           <div class="container">
-            <h2>Welcome to <span>Calcounter</span></h2>
-            <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
+            <h2>Selamat Datang di <span>Calcounter!</span></h2>
+            <p>Hitung kalori Anda dan dapatkan rekomendasi sesuai dengan antropometri dan rata-rata kalori mingguan Anda! Juga lacak catatan asupan kalori Anda!</p>
           </div>
         </div>
 
@@ -111,21 +81,21 @@
       <div class="container" data-aos="zoom-in">
 
         <div class="text-center">
-          <h3>Want to know your calorie intake?</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>Ingin tahu berapa banyak asupan kalori anda hari ini?</h3>
+          <p>Melacak asupan kalori Anda sangat penting untuk menjaga gaya hidup sehat. Gunakan kalkulator kami yang mudah digunakan untuk mengetahui kebutuhan kalori harian Anda. Untuk pelacakan yang akurat dan rekomendasi yang dipersonalisasi, pastikan untuk mengisi formulir ini setiap hari. Mulailah perjalanan Anda menuju kesehatan yang lebih baik hari ini!</p>
           <a class="cta-btn scrollto" href="#appointment">Calculate Now</a>
         </div>
 
       </div>
     </section><!-- End Calculator Section -->
 
-    <!-- ======= Calculator Section ======= -->
+    <!-- ======= Calculator Form Section ======= -->
     <section id="appointment" class="appointment section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Calories Calculator</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Kalkulator Kalori</h2>
+          <p>Untuk mendapatkan hasil yang paling akurat dan rekomendasi yang dipersonalisasi, harap isi formulir ini setiap hari. Sebaiknya selesaikan setelah makan terakhir atau berolahraga pada hari itu untuk memastikan semua aktivitas dan asupan makanan Anda tercatat. Pelacakan yang konsisten akan membantu Anda mencapai tujuan kesehatan dan kebugaran Anda dengan lebih efektif.</p>
         </div>
 
         <form action="{{ route('calculateresult') }}" method="post"  class="php-email-form" data-aos="fade-up" data-aos-delay="100">
@@ -142,32 +112,22 @@
             </div>
           </div>
           <div class="row">
-            <!-- <div class="col-md-4 form-group mt-3">
-              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
-            </div> -->
             <div class="col-md-4 form-group mt-3">
               <select name="gender" id="gender" class="form-select">
-                <option value="">Select Your Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <!-- <option value="Department 3">Department 3</option> -->
+                <option value="">Pilih jenis kelamin</option>
+                <option value="male">Pria</option>
+                <option value="female">Wanita</option>
               </select>
             </div>
-            <!-- <div class="col-md-4 form-group mt-3">
-              <label for="food">
-              Food/Drinks Eaten Today:
-              <textarea class="form-control" name="food" rows="7" required></textarea>
-              </label>
-            </div>
-          </div> -->
+            ]
 
           <div class="form-group mt-3">
-            <label for="food">Food/Drinks Eaten Today:</label>
+            <label for="food">Makanan/Minuman yang anda konsumsi hari ini:</label>
                 <textarea class="form-control" name="food" rows="4" required></textarea>
           <div class="my-3">
 
           <div class="form-group mt-3">
-          <label for="activities">Activities You Did Today:</label>
+          <label for="activities">Aktivitas-aktivitas anda hari ini:</label>
                 <textarea class="form-control" name="activities" rows="4" required></textarea>
             </div>
 
@@ -177,7 +137,7 @@
             <div class="sent-message"></div>
             <div class="calorie-result"></div>
           </div>
-          <div class="text-center"><button type="submit">Submit</button></div>
+          <div class="text-center"><button type="submit">Kirim</button></div>
         </form>
 
         @if (isset($calculatedResults))
@@ -188,15 +148,15 @@
                 @endif
 
       </div>
-    </section><!-- End Appointment Section -->
+    </section><!-- End Calculator Form Section -->
 
     <!-- ======= Recommendation Section ======= -->
     <section id="recommendations" class="departments">
       <div class="container" data-aos="fade-up">
         <div></div>
         <div class="section-title">
-          <h2>Recommendations</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Rekomendasi</h2>
+          <p>Berdasarkan entri harian Anda, kami memberikan rekomendasi yang dipersonalisasi untuk membantu Anda mencapai tujuan kesehatan dan kebugaran Anda. Mencatat makanan dan aktivitas Anda secara konsisten memungkinkan kami memberikan saran yang paling akurat dan efektif yang disesuaikan dengan kebutuhan unik Anda.</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -204,15 +164,15 @@
             <ul class="nav nav-tabs flex-column">
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                  <h4>Average Calories</h4>
-                  <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                  <h4>Rata-rata kalori</h4>
+                  <p>Lihat asupan kalori harian rata-rata Anda dan lihat apakah Anda berada di jalur yang benar.</p>
                 </a>
               </li>
              
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                  <h4>More Adivce</h4>
-                  <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
+                  <h4>Saran Lanjutan</h4>
+                  <p>Dapatkan tips dan saran tambahan untuk meningkatkan diet dan rutinitas olahraga Anda.</p>
                 </a>
               </li>
              
@@ -221,12 +181,12 @@
           <div class="col-lg-8">
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-1">
-                <h3>Your Average Total Calories</h3>
+                <h3>Rata-rata kalori anda</h3>
                 <img src="assets/img/departments-1.jpg" alt="" class="img-fluid">
-               <p> Your Average Total Calories is {{ $recommendData->averageTotalCalories }}. {{ $recommendData->recommendation }}</p>
+               <p> Rata-rata kalori anda adalah {{ $recommendData->averageTotalCalories }}. {{ $recommendData->recommendation }}</p>
               </div>
               <div class="tab-pane" id="tab-2">
-                <h3>Our Adivce</h3>
+                <h3>Saran Lanjutan</h3>
                 <img src="assets/img/departments-3.jpg" alt="" class="img-fluid">
                 <p>{{ $recommendData->additionalRecommendation }}</p>
               </div>
@@ -242,8 +202,8 @@
     <section id="rate-us" class="departments">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
-        <h2>Rate Us</h2>
-        <p>We would love to hear your feedback!</p>
+        <h2>Nilai Kami!</h2>
+        <p>Tolong nilai kami sebagai bahan evaluasi kami untuk meningkatkan pelayanan.</p>
       </div>
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -251,14 +211,14 @@
         <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
             @csrf
             <div class="form-group">
-              <label for="rating">Rate your experience (1-5):</label>
+              <label for="rating">Nilai pengalaman keseluruhan anda:</label>
               <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
             </div>
             <div class="form-group">
-              <label for="comment">Additional Comments:</label>
+              <label for="comment">Komentar tambahan:</label>
               <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
             </div>
-            <div class="text-center"><button type="submit">Submit</button></div>
+            <div class="text-center"><button type="submit">Kirim</button></div>
           </form>
         </div>
       </div>
