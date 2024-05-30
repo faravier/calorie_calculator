@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Controllers\RecommendationController;
+use App\Http\Controllers\RatingController;
 
 class CalorieController extends Controller
 {

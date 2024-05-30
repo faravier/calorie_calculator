@@ -16,7 +16,7 @@
 <body>
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-   <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
+   <a href="http://127.0.0.1:8000" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
           <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto " href="#hero">Home</a></li>
@@ -30,7 +30,7 @@
         <h1 class="text-center mb-4">Weekly Progress</h1>
         <canvas id="weeklyChart" width="800" height="400"></canvas>
         <div class="text-center mt-4">
-            <a href="http://127.0.0.1:8000/" class="btn btn-primary">Back to Home</a>
+            <a href="http://127.0.0.1:8000" class="btn btn-primary">Back to Home</a>
         </div>
     </div>
 

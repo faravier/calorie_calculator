@@ -50,11 +50,11 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto " href="#hero">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#appointment">Kalkulator</a></li>
           <li><a href="http://127.0.0.1:8000/weekly-progress">Progres Mingguan</a></li>
           <li><a class="nav-link scrollto" href="#recommendations">Rekomendasi dan Saran</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Nilai Kami</a></li>          
+          <!-- <li><a class="nav-link scrollto" href="#rate-us">Nilai Kami</a></li>           -->
     </div>
   </header><!-- End Header -->
 
@@ -119,7 +119,7 @@
                 <option value="female">Wanita</option>
               </select>
             </div>
-            ]
+            
 
           <div class="form-group mt-3">
             <label for="food">Makanan/Minuman yang anda konsumsi hari ini:</label>
@@ -199,7 +199,7 @@
     </section><!-- End Recommendation Section -->
 
     <!-- Rate Us Section -->
-    <section id="rate-us" class="departments">
+    <section id="rate-us" class="feedback">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
         <h2>Nilai Kami!</h2>
@@ -208,18 +208,19 @@
 
       <div class="row" data-aos="fade-up" data-aos-delay="100">
         <div class="col-lg-6">
-        <form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
-            @csrf
-            <div class="form-group">
-              <label for="rating">Nilai pengalaman keseluruhan anda:</label>
-              <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
-            </div>
-            <div class="form-group">
-              <label for="comment">Komentar tambahan:</label>
-              <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
-            </div>
-            <div class="text-center"><button type="submit">Kirim</button></div>
-          </form>
+<form action="{{ route('submit_rating') }}" method="post" role="form" class="php-email-form">
+    @csrf
+    <div class="form-group">
+        <label for="rating">Nilai pengalaman keseluruhan anda:</label>
+        <input type="number" class="form-control" name="rating" id="rating" min="1" max="5" required>
+    </div>
+    <div class="form-group">
+        <label for="comment">Komentar tambahan:</label>
+        <textarea class="form-control" name="comment" id="comment" rows="5"></textarea>
+    </div>
+    <div class="text-center"><button type="submit">Kirim</button></div>
+</form>
+
         </div>
       </div>
     </div>
@@ -230,7 +231,8 @@
   </div>
 @endif
 
-  </section><!-- End Rate Us Section -->
+  </section>
+  <!-- End Rate Us Section -->
   
     
   </main><!-- End #main -->
