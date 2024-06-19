@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Calorie Calculator</title>
+  <title>Calcounter</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -54,7 +54,7 @@
           <li><a class="nav-link scrollto" href="#appointment">Kalkulator</a></li>
           <li><a href="http://127.0.0.1:8000/weekly-progress">Progres Mingguan</a></li>
           <li><a class="nav-link scrollto" href="#recommendations">Rekomendasi dan Saran</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#rate-us">Nilai Kami</a></li>           -->
+          <li><a class="nav-link scrollto" href="#rate-us">Nilai Kami</a></li>          
     </div>
   </header><!-- End Header -->
 
@@ -102,20 +102,20 @@
         @csrf 
         <div class="row">
             <div class="col-md-4 form-group">
-              <input type="number" name="age" class="form-control" placeholder="Your Age" required>
+              <input type="number" name="age" class="form-control" placeholder="Your Age" value="24" required>
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="number" class="form-control" name="height" placeholder="Your Height in centimeters" required>
+              <input type="number" class="form-control" name="height" placeholder="Your Height in centimeters" value="165" required>
             </div>
             <div class="col-md-4 form-group mt-3 mt-md-0">
-              <input type="number" class="form-control" name="weight" placeholder="Your Weight in kilograms" required>
+              <input type="number" class="form-control" name="weight" placeholder="Your Weight in kilograms" value="76" required>
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 form-group mt-3">
               <select name="gender" id="gender" class="form-select">
                 <option value="">Pilih jenis kelamin</option>
-                <option value="male">Pria</option>
+                <option value="male" selected>Pria</option>
                 <option value="female">Wanita</option>
               </select>
             </div>

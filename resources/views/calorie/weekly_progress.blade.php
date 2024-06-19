@@ -5,7 +5,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="description">
     <meta content="" name="keywords">
-    <title>Weekly Progress</title>
+    <title>Calcounter</title>
     <!-- Add Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Add the Bootstrap CSS -->
@@ -19,15 +19,15 @@
    <a href="http://127.0.0.1:8000" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>
           <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a href="http://127.0.0.1:8000/">Home</a></li>
           <li><a class="nav-link scrollto" href="#appointment">Calculator</a></li>
-          <li><a href="http://127.0.0.1:8000/weekly-progress">Weekly-Progress</a></li>
+          <li><a class="nav-link scrollto" href="#appointment">Weekly-Progress</a></li>
           <li><a class="nav-link scrollto" href="#recommendations">Recommendations</a></li>
           <li><a class="nav-link scrollto" href="#departments">Rate Us</a></li>          
     </div>
   </header>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Weekly Progress</h1>
+        <h1 class="text-center mb-4">Daily Progress</h1>
         <canvas id="weeklyChart" width="800" height="400"></canvas>
         <div class="text-center mt-4">
             <a href="http://127.0.0.1:8000" class="btn btn-primary">Back to Home</a>
@@ -51,7 +51,7 @@
         data: {
             labels: chartDates,
             datasets: [{
-                label: 'Weekly Total Calories',
+                label: 'Daily Total Calories Intake',
                 data: chartTotalCalories,
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
